@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="Icon" href="OTTlogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My OTT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+    <style>
+        nav{
+            height: 80px;
+            width: 100%;
+            /* background-color: #070b0e; */
+            background-image: radial-gradient(circle, rgb(5, 2, 2), rgb(6, 2, 42), rgb(57, 48, 48), rgb(54, 51, 51), rgb(6, 59, 116), rgb(21, 13, 13));
+            display: flex;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            align-items: center;
+            
+        }
+        .nav-logo img{
+            height: 80px;
+            width: 180px;
+            margin: 7px 0px 7px 5px;
+        }
+        nav .nav-items{
+            position: absolute;
+            right: 20px;
+        }
+        .nav-items a{
+            text-decoration: none;
+            font-size: 25px;
+            padding-left: 5px 5px;
+            color: rgb(87, 192, 183);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 400;
+        }
+        .nav-items ul li{
+          list-style: none;
+          display: inline;
+          margin: 1px 2px;
+        }
+        .nav-items :hover a{
+            filter: blur(1px);
+        }
+        .nav-items a:hover{
+            color: rgba(65, 176, 43, 0.953);
+            filter: blur(0px);
+        }
+        .carousel-inner img{
+            height: 600px;
+            width: 90%;
+            /* display: block; */
+            margin: auto;
+        }
+        body{
+          background-color: rgb(214, 210, 200);
+        }
+        .carousel-control-prev-icon{
+          position: relative;
+          left: 100px;
+        }
+        .carousel-control-next-icon{
+          position: relative;
+          right: 100px;
+        }
+        
+        .frequent-images img{
+              height:350px;
+              width: 280px;
+        }
+        /* .favourite-images img{
+          height: 310px;
+          width: 168px;
+        } */
+
+        .frequent img{
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        .frequent-images img:hover{
+          transform: translate(-20px);
+          scale: 1.2;
+          filter: drop-shadow(10px);
+          transition: all 150ms ease-in-out;
+          border-radius: 10px;
+        }
+        #carouselExampleAutoplaying{
+          margin-top: 80px;
+        }
+        .recent-images{
+          height: auto;
+          width: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
+        .recent img{
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        .recent-images img{
+          height: 350px;
+          width: 280px;
+          padding: 3px;
+        }
+        .recent-images img:hover{
+          transform: translate(-20px);
+          scale: 1.2;
+          filter: drop-shadow(10px);
+          transition: all 1s ease-in-out;
+          border-radius: 10px;
+        }
+        .top-images{
+          height: auto;
+          width: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
+        .top-images img{
+          height: 350px;
+          width: 280px;
+          padding: 3px;
+        }
+        .top-images img:hover{
+          transform: translate(-20px);
+          scale: 1.2;
+          filter: drop-shadow(10px);
+          transition: all 1s ease-in-out;
+          border-radius: 10px;
+        }
+        .favourite-images{
+          height: auto;
+          width: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
+        .favourite-images img{
+          height: 350px;
+          width: 280px;
+          padding: 5px;
+        }
+        .favourite-images img:hover{
+          transform: translate(-20px);
+          scale: 1.2;
+          filter: drop-shadow(10px);
+          transition: all 1s ease-in-out;
+          border-radius: 10px;
+        }
+        .ABOUT{
+            height: 40vh;
+            width: 100%;
+            background-color:black;
+        }
+        .ABOUT pre{
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .ABOUNT img{
+            height: 200px;
+            width: 200px;            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <img src="ILogo.jpeg" alt="">
+        </div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="#carouselExampleAutoplaying">Home</a></li>
+                <li><a href="#freq">Frequently watched</a></li>
+                <li><a href="#rec">Recently Released</a></li>
+                <li><a href="#top">Top Rated</a></li>
+                <li><a href="#fav">Favourite</a></li>
+                <li><a href="#abo">About</a></li>
+                <li><a href="test.html">SignUp/SignIn</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Home Started -->
+    
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="poster1.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="poster2.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="poster3.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="poster4.jpg" class="d-block" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Home selection end -->
+
+    <!-- Frequently watched started -->
+    <div class="frequent">
+      <br>
+      <h2>Frequently watched</h2>
+      <div class="frequent-images 1" id="freq">
+        <img src="f1.jpg" alt="">
+        <img src="fa2.jpg" alt="">
+        <img src="fa3.jpg" alt="">
+        <img src="fa4.jpg" alt="">
+        <img src="fa5.jpg" alt="">
+      </div>
+      <br><br>
+      <div class="frequent-images 2" id="freq">
+        <img src="fa6.jpg" alt="">
+        <img src="fa7.jpg" alt="">
+        <img src="fa8.jpg" alt="">
+        <img src="fa9.jpg" alt="">
+        <img src="fa10.jpeg" alt="">
+      </div>
+    </div>
+    <!-- Frequently watched ends -->
+
+    <!-- Recent Watched -->
+    <div class="Recent">
+      <br>
+      <h2>Recent Watched</h2>
+      <div class="recent-images" id="rec">
+      <img src="fa11.jpg" alt="">
+      <img src="fa12.jpg" alt="">
+      <img src="ta1.jpg" alt="">
+      <img src="ta2.jpg" alt="">
+      <img src="ta3.jpeg" alt="">
+      <img src="ta4.jpg" alt="">
+      <img src="ta5.jpg" alt="">
+      <img src="ta6.jpg" alt="">
+      <img src="fa2.jpg" alt="">
+      <img src="fa3.jpg" alt="">
+    </div>
+    </div>
+    <!-- Recent Watched end -->
+
+    <!-- Top Rated -->
+    <div class="top-rated" id="top">
+      <br>
+      <h2>Top Rated</h2>
+      <div class="top-images" id="top">
+      <img src="aa1.jpeg" alt="">
+      <img src="aa11.jpg" alt="">
+      <img src="aa3.jpg" alt="">
+      <img src="aa4.jpg" alt="">
+      <img src="aa5.jpg" alt="">
+      <img src="aa6.jpg" alt="">
+      <img src="aa7.jpg" alt="">
+      <img src="aa8.jpg" alt="">
+      <img src="aa9.jpg" alt="">
+      <img src="aa10.jpeg" alt="">
+      </div>
+    </div>
+    <!-- Top Rated end -->
+
+    <!-- Favourite -->
+    <div class="Favourite" id="fav">
+      <br>
+      <h2>Favourite</h2>
+      <div class="favourite-images">
+      <img src="f1.jpg" alt="">
+      <img src="ta4.jpg" alt="">
+      <img src="fa10.jpeg" alt="">
+      <img src="fa3.jpg" alt="">
+      <img src="fa12.jpg" alt="">
+      <img src="aa15.jpg" alt="">
+      <img src="aa14.jpg" alt="">
+      <img src="aa13.jpg" alt="">
+      <img src="aa12.jpg" alt="">
+      <img src="aa11.jpg" alt="">
+      </div>
+    </div>
+    <!-- Favourite end -->
+
+    <!-- About -->
+    <div class="ABOUT" id="abo">
+      <h5>ABOUT</h5>
+      <div id="about">
+        <PRE class="abo">
+         Company                           View Website in               Need Help?
+
+         About us                          Kannada                       Visit Help Center
+         
+         careers                                                         Share Feedback   
+          <a class="leg" href="https://www.facebook.com/login/"> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/1200px-Facebook_f_logo_%282021%29.svg.png" alt="" height="40px" width="40px"></a>  
+          <a class="leg"  href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1200px-Logo_of_Twitter.png" alt="" height="40p" width="40px"></a>
+
+        </PRE>
+    <!-- About end -->
+</body>
+</html>
